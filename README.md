@@ -2,7 +2,7 @@
 
 Flyss is a proof-of-concept for deploying a shadowsocks proxy server at little to no cost.
 
-Fly.io is a platform for running Docker containers close to end users. It deploys microVMs to the edge and scales according to the demand. In this case, we use the Docker image from shadowsocks-libev to run a lightweight and cost-effective proxy server. It's capable of tunneling up to 85G/mo, thanks to the monthly credit provided for free.
+[Fly.io](https://fly.io) is a platform for running Docker containers close to end users. It deploys microVMs to the edge and scales according to the demand. In this case, we use the Docker image from shadowsocks-libev to run a lightweight and cost-effective proxy server. It's capable of tunneling up to 85G/mo for free, thanks to the $10/mo monthly free credits.
 
 ## Usage
 
@@ -86,7 +86,8 @@ v0 deployed successfully
 
 1. Do `flyctl info` and you should see the server's hostname and ip.
 
-```$ flyctl info
+```
+$ flyctl info
 App
   Name     = XXXXX-XXX-XXXX          
   Owner    = user                    
@@ -103,14 +104,14 @@ IP Addresses
   v4     XX.XX.XXX.XXX                       1m56s ago   
   v6     XXXX:XXXX:XXXX::                    1m55s ago   
 
-$ flyctl info
+$ flyctl status
 ...
 Allocations
   ID         VERSION   REGION   DESIRED   STATUS    HEALTH CHECKS   CREATED     
   4e051761   0         lax      run       running   1 passing       2m6s ago  
 ```
 
-2. Download a shadowsocks client from https://shadowsocks.org/en/download/clients.html and connect using the following credentials.
+2. Download a shadowsocks client from <https://shadowsocks.org/en/download/clients.html> and connect using the following credentials.
 
 ```json
 {
