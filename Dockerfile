@@ -1,1 +1,1 @@
-FROM shadowsocks/shadowsocks-libev
+FROM davidzz/flyss
